@@ -13,7 +13,6 @@ const toLowerCase = wordList => {
   return lowerCase
 }
 
-
 const countAndSortBeans = wordList => {
 
   var lowerCaseSortedArray = toLowerCase(wordList).sort();
@@ -38,14 +37,12 @@ const countAndSortBeans = wordList => {
   }
 
   var resultString = "";
-
   for (var beanObject of arrayOfBeanObjects) {
     resultString = resultString + beanObject.bean + " " + beanObject.number + ", "
   }
-  return resultString.replace(/,\s*$/, "");
+  return resultString.trim().slice(0,-1);
 }
 
+const simpleList = ["Cannellini", "baked", "cannellini", "kidney"];
 
-  const simpleList = ["Cannellini", "baked", "cannellini", "kidney"];
-
-  assert.equal(countAndSortBeans(simpleList), "baked 1, cannellini 2, kidney 1");
+assert.equal(countAndSortBeans(simpleList), "baked 1, cannellini 2, kidney 1");
