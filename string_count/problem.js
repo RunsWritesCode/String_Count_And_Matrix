@@ -7,19 +7,16 @@ const assert = require("assert");
 
 const toLowerCase = wordList => {
   var lowerCase = [];
-
   for (var i = 0; i < wordList.length; i++) {
     lowerCase.push(wordList[i].toLowerCase());
   }
   return lowerCase
-
 }
 
 
 const countAndSortBeans = wordList => {
 
   var lowerCaseSortedArray = toLowerCase(wordList).sort();
-
   var arrayOfBeanObjects = [];
   var current = null;
 
@@ -51,5 +48,4 @@ const countAndSortBeans = wordList => {
 
   const simpleList = ["Cannellini", "baked", "cannellini", "kidney"];
 
-  // assert.equal(toLowerCase(simpleList), [ 'cannellini', 'baked', 'cannellini', 'kidney' ]);
   assert.equal(countAndSortBeans(simpleList), "baked 1, cannellini 2, kidney 1");

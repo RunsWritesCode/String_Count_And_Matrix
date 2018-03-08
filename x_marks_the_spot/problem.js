@@ -51,7 +51,26 @@ const fourByFour = [
   [-42, 1, 2, 3]
 ];
 
+const negativeThreeByThree = [
+  [-1, 2, -3],
+  [1, -2, 3],
+  [-4, 2, -3]
+];
+
+const nineByNine = [
+  [1, 2, 3, 42, 2, 3, 42, 42, 10],
+  [1, 2, 3, 42, 1, 2, 3, 42, 42],
+  [1, 2, -3, 42, 1, 2, -3, 42, -1],
+  [-42, 1, 2, 3, -42, 1, 2, 3, 1],
+  [1, 2, 3, 42, 2, 3, 42, 42, 8],
+  [1, 2, 3, 42, 1, 2, 3, 42, 42],
+  [1, 2, -3, 42, 1, 2, -3, 42, -1],
+  [-42, 1, 2, 3, -42, 1, 2, 3, 1],
+  [-42, 1, 2, 3, -42, 1, 2, 3, 1]
+];
 
 assert.equal(diagnalDifference(threeByThree), 0);
 assert.equal(diagnalDifference(anotherThreeByThree), 6);
 assert.equal(diagnalDifference(fourByFour), 2);
+assert.equal(diagnalDifference(negativeThreeByThree), 3);
+assert.equal(diagnalDifference(nineByNine), 42);
